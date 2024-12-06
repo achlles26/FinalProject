@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 body {
     margin: 0px;
 }
@@ -10,6 +11,7 @@ p,a,li,td {
     font-family: sans-serif;
     font-size: 20px;
     text-decoration: none;
+    color: black;
 }
 
 header {
@@ -21,6 +23,7 @@ header {
     align-items: center;
     background-color: #f8f8f8;
     z-index: 300;
+    justify-content: space-evenly;
 }
 
 header > div {
@@ -54,6 +57,7 @@ body {
     grid-template-rows: auto;
     grid-template-areas: 
     'header header header header'
+    'about about about about'
     'mast mast mast mast'
     'main main main aside'
     'footer footer footer footer';
@@ -78,23 +82,30 @@ body {
 }
 
 .masthead > div > h1 {
-    font-family: "Press Start 2P", system-ui;
-    font-size: 5em;
+    font-family: "Press Start 2P", sans-serif;
+    font-size: 3em;
     color: #f8f8f8;
 }
 
 footer {
     grid-area: footer;
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     height: 200px;
-    width: 100%;
+    width: 98.6%;
+    padding: 10px;
     background-color: #888888;
 }
 
 footer > section {
     height: 100%;
     width: auto;
+}
+footer > p {
+    font-family: "Press Start 2P", sans-serif;
 }
 
 .footer-logo {
@@ -129,7 +140,6 @@ main > section {
 
 main > section > div {
     padding: 15px;
-
 }
 
 main > section > div > img {
@@ -161,6 +171,17 @@ aside > article > img {
     justify-items: center;
 }
 
+aside > article > p {
+    color:#f8f8f8;
+}
+
 aside > h3 {
     color: #f8f8f8;
+}
+
+/*Ask teacher about if we need a main in the about html*/
+body > section {
+    align-items: center;
+    justify-items: center;
+    grid-area: about;
 }

@@ -2,7 +2,7 @@ body {
     margin: 0px;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h2,h3,h4,h5,h6 {
     font-family: sans-serif;
 }
 
@@ -13,12 +13,14 @@ p,a,li,td {
 }
 
 header {
+    grid-area: header;
     display: flex;
     width: 100%;
-    height: 115px;
+    height: 150px;
     padding: 10px 0px;
     align-items: center;
     background-color: #f8f8f8;
+    z-index: 300;
 }
 
 header > div {
@@ -29,7 +31,7 @@ header > div {
 header > div > a > img {
     width: auto;
     height: 100%;
-
+    border-radius: 15px;
 }
 
 header > nav > menu {
@@ -45,4 +47,120 @@ header > nav > menu > li {
 
 header > nav > menu > li > a {
     color: #0e0e0e;
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    'header header header header'
+    'mast mast mast mast'
+    'main main main aside'
+    'footer footer footer footer';
+    grid-auto-columns: 25% 25% 25% 25%;
+}
+
+.masthead {
+    grid-area: mast;
+    height: 100vh;
+    background-image: url("../img/nes-image.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.masthead > div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,.5);
+}
+
+.masthead > div > h1 {
+    font-family: "Press Start 2P", system-ui;
+    font-size: 5em;
+    color: #f8f8f8;
+}
+
+footer {
+    grid-area: footer;
+    display: flex;
+    align-items: center;
+    height: 200px;
+    width: 100%;
+    background-color: #888888;
+}
+
+footer > section {
+    height: 100%;
+    width: auto;
+}
+
+.footer-logo {
+    height: 100%;
+    width: auto;
+}
+.footer-logo > a > img {
+    height: 100%;
+    width: auto;
+    border-radius: 15px;
+}
+
+footer > section + section > div {
+    height: 200px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    grid-area: main;
+
+}
+main > section {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 2%;
+    background-color: #f8f8f8;
+    border: solid black;
+}
+
+main > section > div {
+    padding: 15px;
+
+}
+
+main > section > div > img {
+    width: 100%;
+    height: auto;
+}
+
+aside {
+    background-color: rgb(34, 33, 33);
+    grid-area: aside;
+    display: grid;
+    grid-template-columns: 100%;
+    align-items: center;
+    justify-items: center;
+}
+
+aside > article {
+    width: 90%;
+    height: auto;
+    margin: 0px;
+    align-items: center;
+    justify-items: center;
+}
+
+aside > article > img {
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-items: center;
+}
+
+aside > h3 {
+    color: #f8f8f8;
 }

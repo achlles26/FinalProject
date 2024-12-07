@@ -1,12 +1,16 @@
+/*Couldnt get the custom font to import in the html, so we used a @import provided by google fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+/*removing the body margin*/
 body {
     margin: 0px;
 }
 
+/*styling the h tags with sans-serif font*/
 h2,h3,h4,h5,h6 {
     font-family: sans-serif;
 }
 
+/*styling the p a li td figcaption elements with different font styling and removing text decoration*/
 p,a,li,td, figcaption {
     font-family: sans-serif;
     font-size: 20px;
@@ -14,6 +18,7 @@ p,a,li,td, figcaption {
     color: black;
 }
 
+/*header styling*/
 header {
     grid-area: header;
     display: flex;
@@ -26,21 +31,27 @@ header {
     justify-content: space-evenly;
 }
 
+/*Seperating the logo and the navigation menu and sizing it*/
 header > div {
     width: auto;
     height: 100%;
     flex-grow: 1;
 }
+
+/*sizing the header logo and rounding the corners for a nicer look*/
 header > div > a > img {
     width: auto;
     height: 100%;
     border-radius: 15px;
 }
+
+/*placing the NES Final Project Page title in the middle of the header*/
 header > p {
     flex-grow: 1;
     font-family: "Press Start 2P", sans-serif;
 }
 
+/*styling the navigation menu*/
 header > nav > menu {
     display: flex;
     margin: 0px;
@@ -48,14 +59,20 @@ header > nav > menu {
     list-style: none;
 }
 
+/*adding padding to the list*/
 header > nav > menu > li {
     padding: 0px 10px;
 }
 
+/*changing the color of the anchor*/
 header > nav > menu > li > a {
     color: #0e0e0e;
 }
 
+/*
+displaying grid
+making grid-template-areas, and making grid-auto-columns
+*/
 body {
     display: grid;
     grid-template-rows: auto;
@@ -69,6 +86,7 @@ body {
     grid-auto-columns: 25% 25% 25% 25%;
 }
 
+/*styling the masthead and applying adding a background image*/
 .masthead {
     grid-area: mast;
     height: 100vh;
@@ -77,6 +95,7 @@ body {
     background-position: center;
 }
 
+/*styling the text in the masthead section div*/
 .masthead > div {
     width: 100%;
     height: 100%;
@@ -86,12 +105,14 @@ body {
     background-color: rgba(0,0,0,.5);
 }
 
+/*changing the font of the h1 in the masthead div*/
 .masthead > div > h1 {
     font-family: "Press Start 2P", sans-serif;
     font-size: 3em;
     color: #f8f8f8;
 }
 
+/*styling the footer, and assigning the grid-area*/
 footer {
     grid-area: footer;
     display: grid;
@@ -105,24 +126,31 @@ footer {
     background-color: #888888;
 }
 
+/*sizing the footer sections*/
 footer > section {
     height: 100%;
     width: auto;
 }
+
+/*styling the paragraph element*/
 footer > p {
     font-family: "Press Start 2P", sans-serif;
 }
 
+/*sizing the footer logo*/
 .footer-logo {
     height: 100%;
     width: auto;
 }
+
+/*sizing the footer logo image*/
 .footer-logo > a > img {
     height: 100%;
     width: auto;
     border-radius: 15px;
 }
 
+/*styling the section:nth-child(2)*/
 footer > section + section > div {
     height: 200px;
     width: auto;
@@ -131,10 +159,15 @@ footer > section + section > div {
     justify-content: center;
 }
 
+/*assigning the grid-area main*/
 main {
     grid-area: main;
 
 }
+
+/*
+styling the main product sections
+*/
 .index > main > section {
     display: grid;
     grid-template-columns: 50% 50%;
@@ -143,15 +176,19 @@ main {
     border: solid black;
 }
 
+/*adding padding to the main section div*/
 main > section > div {
     padding: 15px;
 }
 
+/*sizing the images in the main section div*/
 main > section > div > img {
     width: 100%;
     height: auto;
 }
 
+/*styling the aside
+assigning grid-area*/
 aside {
     background-color: rgb(34, 33, 33);
     grid-area: aside;
@@ -161,6 +198,7 @@ aside {
     justify-items: center;
 }
 
+/*sizing and styling the article in the aside*/
 aside > article {
     width: 95%;
     height: auto;
@@ -169,6 +207,7 @@ aside > article {
     justify-items: center;
 }
 
+/*sizing the figure images*/
 aside > article > figure > img {
     width: 100%;
     height: auto;
@@ -176,21 +215,24 @@ aside > article > figure > img {
     justify-items: center;
 }
 
+/*styling the figcaptions in the figure*/
 aside > article > figure > figcaption {
     text-align: center;
     color:#f8f8f8;
 }
 
+/*changing the color of the h3*/
 aside > h3 {
     color: #f8f8f8;
 }
 
+/*styling the main in the about page, and assigning the grid-area*/
 .about > main {
     grid-area: main2;
     align-items: center;
     justify-items: center;
 }
-/*Ask teacher about if we need a main in the about html*/
+/*styling the first section child in the main*/
 .about > main > section:nth-child(1) {
     text-align: center;
     grid-area: about;
@@ -199,34 +241,42 @@ aside > h3 {
     font-family: "Press Start 2P", sans-serif;
 }
 
+/*styling the second section child in the main*/
 .about > main > section:nth-child(2) {
     height: 125px;
 }
 
+/*styling the paragraph in second section child of the main */
 .about > main > section:nth-child(2) > p {
     font-family: "Press Start 2P", sans-serif;
     text-align: center;
 }
 
+/*displaying flex and assigning a grid-area in the main of the contact page*/
 .contact > main {
     grid-area: main2;
     display: flex;
 }
+
+/*styling the h3 in the main contact div*/
 .contact > main > div > h3 {
     font-family: "Press Start 2P", sans-serif;
 }
 
+/*sizing the images in the contact main div*/
 .contact > main > div > img {
     width: 95%;
     height: auto;
 }
 
+/*adjusting the position of the contact main second div child*/
 .contact > main > div:nth-child(2) {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
 }
 
+/*adjusting the positioning of the main in the shop page*/
 .shop > main {
     display: grid;
     grid-area: main2;
@@ -235,63 +285,69 @@ aside > h3 {
     flex-direction: column;
 }
 
+/*adjusting the position of the first section child div*/
 .shop > main > section:nth-child(1) > div{
     display:flex;
     align-items: center;
     justify-content: space-between;
 }
 
+/*adjusting the position of the second section child*/
 .shop > main > section:nth-child(2) {
     display:flex;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
-
-.shop > main > section:nth-child(2) > img:nth-child(2) {
-    height: 250px;
-}
+/*aligning text in the shop page div*/
 
 .shop > main > section > div {
     text-align: center;
 }
 
+/*adjusting the position of the images*/
 .images {
     display: flex;
     align-items: center;
 }
 
+/*sizing the images in the shop page*/
 .shop > main > section > div > img {
     height: 280px;
     width: auto;
 }
 
+/*positioning the div in the product sections*/
 .products > main > section > div {
     align-items: center;
     justify-content: center;
 }
 
+/*changing the font of the h1 in the product div*/
 .products > main > section > div > h1 {
     font-family: "Press Start 2P", sans-serif;
 }
+
+/*positioning the second div child*/
 .products > main > section > div:nth-child(2) {
     display: flex;
     justify-content: space-between;
 }
 
+/*positioning the form in the second div child*/
 .products > main > section > div:nth-child(2) > form {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
 }
 
+/*sizing the form input on the product pages and then rounding the corners on the input*/
 .products > main > section > div:nth-child(2) > form > input {
     border-radius: 12px;
     height: 30px;
     width: auto;
 }
 
+/*changing the color of the anchor text in the aside figcaption on the product pages*/
 .products > aside > article > figure > figcaption > a {
     color: #f8f8f8;
 }
-
- 

@@ -7,7 +7,7 @@ $(document).ready(function(){
         $("#footer").load("./includes/footer.html");
     });
     $(".hover").hover(
-        //Bind an event handler to the "mouseenter" event, or trigger that event on an element
+        //first hover function that has a different color than the first
         function(){
             //mouse enter
             $(this).css('background-color', '#transparent');
@@ -20,7 +20,7 @@ $(document).ready(function(){
         }
     );
     $(".hover2").hover(
-        //Bind an event handler to the "mouseenter" event, or trigger that event on an element
+        //second hover function that has a different color
         function(){
             //mouse enter
             $(this).css('background-color', '#transparent');
